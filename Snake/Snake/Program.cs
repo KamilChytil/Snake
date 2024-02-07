@@ -24,10 +24,11 @@ namespace Snake
             snakePosition.ypos = screenHeight/2;
             snakePosition.snakeHeadeColor = ConsoleColor.Red;
             string currentlMovementDirectio = "RIGHT";
-            List<int> xposlijf = new List<int>();
-            List<int> yposlijf = new List<int>();
-            int berryx = randomnummer.Next(1, screenWidth);
+            List<int> xPositionSnakeList = new List<int>();
+            List<int> yPositionSnakeList = new List<int>();
+            int berryx = randomnummer.Next(0, screenWidth);
             int berryy = randomnummer.Next(0, screenHeight);
+            
             DateTime tijd = DateTime.Now;
             DateTime tijd2 = DateTime.Now;
             while (true)
@@ -64,11 +65,11 @@ namespace Snake
                     berryx = randomnummer.Next(1, screenWidth-2);
                     berryy = randomnummer.Next(1, screenHeight-2);
                 } 
-                for (int i = 0; i < xposlijf.Count(); i++)
+                for (int i = 0; i < xPositionSnakeList.Count(); i++)
                 {
-                    Console.SetCursorPosition(xposlijf[i], yposlijf[i]);
+                    Console.SetCursorPosition(xPositionSnakeList[i], yPositionSnakeList[i]);
                     Console.Write("■");
-                    if (xposlijf[i] == snakePosition.xpos && yposlijf[i] == snakePosition.ypos)
+                    if (xPositionSnakeList[i] == snakePosition.xpos && yPositionSnakeList[i] == snakePosition.ypos)
                     {
                         gameover = 1;
                     }
@@ -110,8 +111,8 @@ namespace Snake
                         }
                     }
                 }
-                xposlijf.Add(snakePosition.xpos);
-                yposlijf.Add(snakePosition.ypos);
+                xPositionSnakeList.Add(snakePosition.xpos);
+                yPositionSnakeList.Add(snakePosition.ypos);
                 switch (currentlMovementDirectio)
                 {
                     case "UP":
@@ -127,10 +128,10 @@ namespace Snake
                         snakePosition.xpos++;
                         break;
                 }
-                if (xposlijf.Count() > score)
+                if (xPositionSnakeList.Count() > score)
                 {
-                    xposlijf.RemoveAt(0);
-                    yposlijf.RemoveAt(0);
+                    xPositionSnakeList.RemoveAt(0);
+                    yPositionSnakeList.RemoveAt(0);
                 }
             }
             Console.SetCursorPosition(screenWidth / 5, screenHeight / 2);
