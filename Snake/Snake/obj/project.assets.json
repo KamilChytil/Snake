@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\k_chytil\\source\\repos\\Snake\\Snake\\Snake.csproj",
+      "projectUniqueName": "C:\\Users\\k_chytil\\Snake-main\\Snake-main\\Snake\\Snake\\Snake.csproj",
       "projectName": "Snake",
-      "projectPath": "C:\\Users\\k_chytil\\source\\repos\\Snake\\Snake\\Snake.csproj",
+      "projectPath": "C:\\Users\\k_chytil\\Snake-main\\Snake-main\\Snake\\Snake\\Snake.csproj",
       "packagesPath": "C:\\Users\\k_chytil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\k_chytil\\source\\repos\\Snake\\Snake\\obj\\",
+      "outputPath": "C:\\Users\\k_chytil\\Snake-main\\Snake-main\\Snake\\Snake\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\k_chytil\\AppData\\Roaming\\NuGet\\NuGet.Config",

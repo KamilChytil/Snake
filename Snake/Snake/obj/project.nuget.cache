@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1/R1+CDwVSkZzHgjfixqaLamriHFo+pWHppAcj6/hQEzh0ruHDQ+YtpSzwn7/WddGYZvlQiGJTfGL8+aJzVT+w==",
+  "dgSpecHash": "EtoG3SDXqi7ThdMkfx1xfAb2lC9x4NUzxS68H6HPMrDHox2QA4W7naiOTMh9sDaQe2lCbn4xUbcVoEElCMEqNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\k_chytil\\source\\repos\\Snake\\Snake\\Snake.csproj",
+  "projectFilePath": "C:\\Users\\k_chytil\\Snake-main\\Snake-main\\Snake\\Snake\\Snake.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
