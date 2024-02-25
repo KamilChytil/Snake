@@ -57,6 +57,7 @@ namespace Snake
                     SnakeLogic.chooseBerryPozition();
                 }
                 SnakeUI.drawSnake(snakePosition);
+                SnakeLogic.isSnakeIntersecting(snakePosition);
                 if (isNotGameOver == false)
                 {
                     SnakeUI.drawGameOverText();
@@ -98,10 +99,6 @@ namespace Snake
             {
                 Console.SetCursorPosition(Program.horizontalPositionSnakeList[currentSnakeSquare], Program.verticalPositionSnakeList[currentSnakeSquare]);
                 Console.Write("■");
-                if (SnakeLogic.isSnakeTouchingItSelf(snakePosition, currentSnakeSquare))
-                {
-                    Program.isNotGameOver = false;
-                }
             }
         }
 
@@ -225,6 +222,19 @@ namespace Snake
                 isNotGameOver = true;
                 return true;
             }
+        }
+
+        public static bool isSnakeIntersecting(SnakeBody snakePosition)
+        {
+            for (int currentSnakeSquare = 0; currentSnakeSquare < Program.horizontalPositionSnakeList.Count(); currentSnakeSquare++)
+            {
+                if (SnakeLogic.isSnakeTouchingItSelf(snakePosition, currentSnakeSquare))
+                {
+                    Program.isNotGameOver = false;
+                    return true;
+                }
+            }
+            return false;
         }
 
         public static bool isSnakeOnBarry(SnakeBody snakePosition)
